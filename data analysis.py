@@ -13,7 +13,6 @@ print("\nFirst few rows of the dataset:")
 print(df.head())
 
 # Perform some basic data analysis
-# For example, calculate mean, median, and standard deviation of a numerical column
 numeric_column = 'duration'  
 print("\nBasic statistics for '{}' column:".format(numeric_column))
 print("Mean:", df[numeric_column].mean())
@@ -30,7 +29,7 @@ plt.grid(True)
 plt.show()
 
 # Generate a bar chart to visualize the frequency of categorical values
-categorical_column = 'rating'  # Replace 'column_name' with the actual column name
+categorical_column = 'rating'  
 plt.figure(figsize=(8, 6))
 df[categorical_column].value_counts().plot(kind='bar', color='lightgreen')
 plt.title("Bar chart of '{}' column".format(categorical_column))
@@ -39,8 +38,4 @@ plt.ylabel("Frequency")
 plt.grid(axis='y')
 plt.show()
 
-# Perform more advanced analysis as needed
 
-# Save the visualizations or results if necessary
-# plt.savefig('histogram.png')
-# df.to_csv('analyzed_data.csv', index=False)
